@@ -1,0 +1,1224 @@
+# DEEN — COMPLETE PROJECT AUDIT, ISLAMIC AUTHENTICITY, FULL APP DEVELOPMENT, TESTING & BUILD GUIDE
+
+## ROLE
+
+Act as a Senior Android Developer, Kotlin Architect, Jetpack Compose Specialist, Islamic Research Specialist, Hadith Verification Researcher, Arabic Language Proofreader, Bengali Translation Reviewer, QA Engineer, UI/UX Engineer, Database Architect and Android Release Engineer.
+
+You are working on an existing Android application named **DEEN**.
+
+Your mission is to inspect, audit, improve, complete, test and prepare the entire existing Deen application for production release.
+
+This is a complete project development and quality assurance task.
+
+Do not simply provide suggestions. Work directly with the existing project files whenever project editing tools are available.
+
+## 1. PROJECT TECHNOLOGY REQUIREMENTS
+
+Maintain the existing technology stack:
+
+- Programming Language: Kotlin.
+- UI Framework: Jetpack Compose.
+- Design System: Material 3.
+- Architecture: Clean, maintainable and scalable Android architecture.
+- UI State: StateFlow or the existing appropriate state-management solution.
+- Database: Preserve the existing database technology unless a justified improvement is necessary.
+- Background Tasks: WorkManager or appropriate Android scheduling APIs.
+- Preferences: DataStore or existing implementation.
+- Minimum Android SDK: Inspect the existing configuration before changing it.
+- Target SDK: Follow current Google Play requirements.
+- Build System: Gradle.
+- Languages: Bengali and English.
+- Theme: Dynamic Light and Dark Mode.
+
+Do not unnecessarily replace existing working libraries, architecture or dependencies.
+
+Preserve the application's established visual identity.
+
+---
+
+# PART A — COMPLETE EXISTING PROJECT AUDIT
+
+## PHASE 1 — COMPLETE PROJECT INSPECTION
+
+Inspect the entire project structure.
+
+Examine:
+
+- All Kotlin source files.
+- Jetpack Compose screens.
+- MainActivity.
+- Navigation components.
+- ViewModels.
+- Repositories.
+- Use cases.
+- Data sources.
+- Room Database.
+- Entities and DAOs.
+- Database records and seed data.
+- JSON datasets.
+- XML resources.
+- String resources.
+- Arabic text assets.
+- Bengali translations.
+- English translations.
+- Images and font assets.
+- API integrations.
+- Network configurations.
+- Gradle dependencies.
+- AndroidManifest.xml.
+- Permissions.
+- Services.
+- Broadcast receivers.
+- WorkManager tasks.
+- Notification implementations.
+- DataStore preferences.
+- Unit tests.
+- Instrumentation tests.
+
+Identify:
+
+- Missing files.
+- Duplicate implementations.
+- Unused code.
+- Broken imports.
+- Incorrect dependencies.
+- Deprecated APIs.
+- Architecture problems.
+- Potential crashes.
+- Memory leaks.
+- Incorrect state management.
+- Database inconsistencies.
+- Unhandled exceptions.
+
+Create a complete inventory of existing features before changing anything.
+
+Do not skip any accessible project files.
+
+## PHASE 2 — HADITH AUTHENTICITY VERIFICATION
+
+Inspect EVERY Hadith in the application.
+
+Verify:
+
+1. Exact Arabic text.
+2. Arabic spelling.
+3. Arabic grammar where applicable.
+4. Missing letters.
+5. Extra letters.
+6. Incorrect words.
+7. Missing or incorrect Harakat.
+8. Punctuation.
+9. Missing or duplicated phrases.
+10. Complete narration accuracy.
+11. Bengali translation.
+12. English translation.
+13. Hadith collection.
+14. Reference number.
+15. Narrator information.
+16. Chapter information.
+17. Authenticity grade.
+18. Grading scholar/source.
+19. Original source URL.
+
+Reference sources:
+
+- https://sunnah.com/
+- Authorized Hadith datasets.
+- Reliable primary Hadith references.
+- Recognized scholarly publications.
+
+Rules:
+
+- Never assume a Hadith is Sahih.
+- Never invent a reference or narrator.
+- Never assign an authenticity grade without evidence.
+- Never silently modify Arabic text.
+- Do not confuse different narrations.
+- Do not confuse different numbering systems.
+- Distinguish exact matches from documented variants.
+- Mark unverifiable records as UNVERIFIED.
+
+For every issue, show the original text and verified source text side by side.
+
+## PHASE 3 — DUA & AZKAR VERIFICATION
+
+Inspect EVERY Dua and Azkar item.
+
+Verify:
+
+- Arabic spelling.
+- Arabic letters.
+- Harakat.
+- Missing or extra words.
+- Bengali pronunciation.
+- Bengali meaning.
+- English meaning.
+- Original source.
+- Authenticity.
+- Repetition count.
+- Claimed benefits.
+- Claimed rewards.
+- Recitation context.
+- Category classification.
+
+Reference sources:
+
+- Hisnul Muslim.
+- https://opendua.org/
+- Reliable scholarly references.
+- Original Hadith sources.
+
+Never invent religious references, rewards, repetition counts or translations.
+
+Do not automatically classify every Hisnul Muslim narration as Sahih.
+
+## PHASE 4 — COMPLETE ARABIC SPELLING AUDIT
+
+Check all Arabic religious text.
+
+Inspect:
+
+- Incorrect characters.
+- Similar-looking incorrect letters.
+- Missing letters.
+- Extra letters.
+- Incorrect word order.
+- Incorrect word separation.
+- Missing diacritics.
+- Incorrect diacritics.
+- Punctuation.
+- Unicode integrity.
+- Broken encoding.
+- RTL alignment.
+- Arabic shaping.
+- Ligatures.
+- Font rendering.
+- Diacritic positioning.
+
+Compare the actual text against reliable original sources.
+
+Keep textual accuracy and visual rendering as two separate verification categories.
+
+## PHASE 5 — BENGALI PRONUNCIATION & TRANSLATION AUDIT
+
+Check:
+
+- Arabic-to-Bengali pronunciation.
+- Transliteration.
+- Bengali meaning.
+- Missing words.
+- Additional meanings.
+- Misleading interpretations.
+- Religious terminology.
+- Spelling.
+- Grammar.
+- Readability.
+- Consistency.
+
+Do not introduce meanings that are absent from the original text.
+
+Mark disputed translations PENDING HUMAN REVIEW.
+
+## PHASE 6 — ENGLISH TRANSLATION AUDIT
+
+Check:
+
+- Translation accuracy.
+- Missing phrases.
+- Added meanings.
+- Incorrect terminology.
+- Grammar.
+- Readability.
+- Consistency with Arabic.
+- Consistency with Bengali.
+
+Document the original text and proposed corrections separately.
+
+## PHASE 7 — RELIGIOUS CONTENT DATA INTEGRITY
+
+Inspect the complete religious content database.
+
+Identify:
+
+- Duplicate Hadith.
+- Duplicate Dua.
+- Missing Arabic text.
+- Missing translations.
+- Missing references.
+- Invalid IDs.
+- Incorrect categories.
+- Incorrect repetition counts.
+- Inconsistent grading.
+- Broken source links.
+- Missing verification records.
+
+Where appropriate, create a content verification structure supporting:
+
+- Unique ID.
+- Arabic text.
+- Bengali pronunciation.
+- Bengali translation.
+- English translation.
+- Source.
+- Reference.
+- Authenticity information.
+- Source URL.
+- Verification status.
+- Last verification date.
+- Verification notes.
+
+Never display unverified content as VERIFIED.
+
+Preserve existing bookmarks and user progress.
+
+---
+
+# PART B — FEATURE-BY-FEATURE FUNCTIONAL AUDIT
+
+## PHASE 8 — PRAYER TIMES & AZAN
+
+Inspect all five prayer times:
+
+- Fajr.
+- Dhuhr.
+- Asr.
+- Maghrib.
+- Isha.
+
+Verify:
+
+- Calculation method.
+- Location coordinates.
+- Timezone.
+- Local date.
+- Daylight saving where applicable.
+- Madhab.
+- Asr calculation.
+- Fajr and Isha angles.
+- High-latitude adjustments.
+- Next prayer.
+- Countdown.
+- Monthly timetable.
+- Notification scheduling.
+- Notification permissions.
+- Azan audio.
+- Individual prayer switches.
+- Restart behavior.
+- Background scheduling.
+
+Compare prayer calculations using identical locations, dates, timezones, methods and Madhab settings.
+
+Test midnight and date-transition edge cases.
+
+## PHASE 9 — QIBLA COMPASS
+
+Verify:
+
+- User coordinates.
+- Kaaba coordinates.
+- Bearing formula.
+- Distance calculation.
+- Magnetometer.
+- Device orientation.
+- Sensor calibration.
+- Direction updates.
+- Sensor availability.
+- Location permissions.
+
+Test mathematical accuracy independently.
+
+Physical compass accuracy must be tested on an actual device.
+
+## PHASE 10 — HIJRI CALENDAR
+
+Verify:
+
+- Hijri date.
+- Gregorian conversion.
+- Islamic month names.
+- Month boundaries.
+- Ramadan.
+- Eid al-Fitr.
+- Eid al-Adha.
+- Arafah.
+- Ashura.
+- Hijri offset.
+
+Account for timezone and local moon-sighting differences.
+
+Distinguish predicted dates from locally confirmed dates.
+
+## PHASE 11 — DIGITAL TASBIH
+
+Test:
+
+- Counter increment.
+- Reset.
+- Custom targets.
+- Dhikr presets.
+- Haptic feedback.
+- Session history.
+- Daily totals.
+- Data persistence.
+- Duplicate counting.
+- App restart.
+- Date changes.
+- Progress calculation.
+
+## PHASE 12 — PRAYER TRACKER
+
+Test:
+
+- Five prayer records.
+- Completion status.
+- Missed prayer status.
+- Daily tracking.
+- Weekly statistics.
+- Monthly statistics.
+- History.
+- Date changes.
+- Database persistence.
+- Duplicate records.
+- Progress calculations.
+
+Never automatically mark a prayer as completed.
+
+## PHASE 13 — LANGUAGE SYSTEM
+
+Test Bengali and English.
+
+Verify:
+
+- Instant language switching.
+- No Activity recreation.
+- No app restart.
+- No mixed-language labels.
+- No missing translations.
+- No untranslated dialogs.
+- No text overflow.
+- Correct notifications.
+- Persistent preferences.
+
+Arabic religious text must remain Arabic regardless of application language.
+
+## PHASE 14 — LIGHT & DARK MODE
+
+Inspect every screen in both themes.
+
+Check:
+
+- Backgrounds.
+- Cards.
+- Text contrast.
+- Icons.
+- Borders.
+- Shadows.
+- Navigation bars.
+- Dialogs.
+- Inputs.
+- Selected states.
+- Arabic readability.
+- Bengali readability.
+
+Preserve the Deen design identity:
+
+Light Mode:
+- Warm Cream.
+- Off-white.
+- White.
+- Emerald Green.
+- Subtle Gold.
+
+Dark Mode:
+- Proper dark surfaces.
+- Readable text.
+- Consistent accent colors.
+- Appropriate contrast.
+
+Do not simply invert colors.
+
+## PHASE 15 — COMPLETE UI/UX AUDIT
+
+Inspect:
+
+- Layout.
+- Spacing.
+- Alignment.
+- Typography.
+- Arabic fonts.
+- Bengali fonts.
+- Buttons.
+- Icons.
+- Cards.
+- Bottom navigation.
+- Responsiveness.
+- Small screens.
+- Loading states.
+- Empty states.
+- Error states.
+- Accessibility.
+- Touch target sizes.
+- Scrolling.
+
+Use the existing Deen reference design as the visual benchmark.
+
+Do not perform an unrelated redesign.
+
+## PHASE 16 — FUNCTIONALITY TESTING
+
+Test EVERY visible interactive component.
+
+Verify:
+
+- Buttons.
+- Navigation.
+- Back navigation.
+- Search.
+- Filters.
+- Bookmarks.
+- Sharing.
+- Notifications.
+- Audio playback.
+- Settings.
+- Database operations.
+- Offline behavior.
+- API failures.
+- Loading states.
+- Empty states.
+- Error states.
+- Preference persistence.
+
+Identify decorative buttons without actual functionality.
+
+## PHASE 17 — SECURITY & PERFORMANCE
+
+Inspect:
+
+- API keys.
+- Hardcoded credentials.
+- Insecure network calls.
+- Local storage.
+- Permissions.
+- Database security.
+- Network security.
+- Unnecessary requests.
+- Memory usage.
+- Battery consumption.
+- Background execution.
+- Startup performance.
+- Crash risks.
+- Sensitive logging.
+- Dependency vulnerabilities.
+
+Never expose private credentials.
+
+---
+
+# PART C — FULL APP DEVELOPMENT & COMPLETION GUIDE
+
+## PHASE 18 — FEATURE COMPLETION ANALYSIS
+
+After completing the audit, create a feature implementation matrix.
+
+For each feature identify:
+
+- Current implementation status.
+- Existing source files.
+- Existing dependencies.
+- Missing functionality.
+- Identified bugs.
+- Required improvements.
+- Database requirements.
+- API requirements.
+- Permissions.
+- Testing requirements.
+
+Use these statuses:
+
+- COMPLETE
+- PARTIALLY COMPLETE
+- NOT IMPLEMENTED
+- BROKEN
+- NEEDS VERIFICATION
+
+Do not assume a feature exists simply because a screen is visible.
+
+Check the actual functionality behind every screen.
+
+## PHASE 19 — COMPLETE APPLICATION ARCHITECTURE
+
+Review and improve the architecture without unnecessarily replacing working code.
+
+Organize the application into maintainable layers where appropriate:
+
+1. Presentation Layer.
+2. Domain Layer.
+3. Data Layer.
+4. Database Layer.
+5. Network Layer.
+6. Background Processing.
+7. Core Utilities.
+8. Navigation.
+9. Localization.
+10. Theme System.
+
+For every major feature, establish a clear data flow:
+
+UI → ViewModel → Use Case → Repository → Data Source.
+
+Use dependency injection if appropriate for the existing project.
+
+Avoid unnecessary abstraction.
+
+Avoid duplicate business logic.
+
+Use reusable Compose components.
+
+Ensure proper lifecycle-aware state collection.
+
+Handle loading, success, empty and error states consistently.
+
+## PHASE 20 — FULL FEATURE IMPLEMENTATION
+
+Complete missing or broken features identified during the audit.
+
+### A. Prayer Times
+
+Implement or complete:
+
+- Automatic location detection.
+- Manual location selection.
+- Prayer calculation methods.
+- Madhab selection.
+- Daily timetable.
+- Monthly timetable.
+- Next prayer countdown.
+- Individual prayer notifications.
+- Azan sound selection.
+- Notification settings.
+- Timezone-aware scheduling.
+
+### B. Qibla
+
+Implement or complete:
+
+- Location permission handling.
+- Bearing calculation.
+- Compass sensors.
+- Direction animation.
+- Calibration instructions.
+- Sensor availability fallback.
+- Distance to Kaaba.
+
+### C. Hadith
+
+Implement or complete:
+
+- Hadith listing.
+- Search.
+- Categories.
+- Detailed Hadith screen.
+- Arabic text.
+- Bengali translation.
+- English translation.
+- Reference.
+- Authenticity information.
+- Bookmarks.
+- Sharing.
+
+Only use traceable and verified content.
+
+### D. Dua & Azkar
+
+Implement or complete:
+
+- Morning Azkar.
+- Evening Azkar.
+- After-prayer Azkar.
+- Daily Duas.
+- Sleep Duas.
+- Travel Duas.
+- Arabic text.
+- Bengali pronunciation.
+- Bengali meaning.
+- English meaning.
+- Audio where available and licensed.
+- Repetition counter.
+- Bookmarks.
+- Sources.
+
+### E. Digital Tasbih
+
+Implement or complete:
+
+- Interactive counter.
+- Custom Dhikr.
+- Target selection.
+- Reset.
+- Haptic feedback.
+- Session history.
+- Daily statistics.
+
+### F. Prayer Tracker
+
+Implement or complete:
+
+- Five prayer tracking.
+- Manual completion.
+- Missed prayer tracking.
+- Daily progress.
+- Weekly statistics.
+- Monthly statistics.
+- History.
+
+### G. Islamic Calendar
+
+Implement or complete:
+
+- Gregorian calendar.
+- Hijri calendar.
+- Islamic month names.
+- Important dates.
+- Date adjustment.
+- Local moon-sighting information.
+
+### H. Settings
+
+Implement or complete:
+
+- Bengali/English language switch.
+- Light/Dark/System theme.
+- Notification settings.
+- Prayer calculation settings.
+- Madhab settings.
+- Location settings.
+- App information.
+- Privacy policy.
+- About Deen.
+
+Do not create dummy implementations.
+
+If an external service or licensed dataset is required, identify the dependency and explain how to configure it.
+
+## PHASE 21 — COMPLETE DATABASE & API GUIDE
+
+Inspect the existing data architecture first.
+
+Create or improve database structures only when necessary.
+
+Document:
+
+- Database tables.
+- Entity relationships.
+- Primary keys.
+- Foreign keys.
+- Indices.
+- Migration strategy.
+- Data persistence.
+- Backup strategy.
+- Error handling.
+- Offline behavior.
+
+If a backend is used, document:
+
+- API endpoints.
+- Request/response formats.
+- Authentication.
+- Error responses.
+- Network security.
+- API key configuration.
+- Rate limits.
+- Offline fallback.
+
+Never expose secret keys inside the Android application.
+
+Never introduce a backend just because it seems useful if the current application works without one.
+
+## PHASE 22 — COMPLETE BUILD AND DEVELOPMENT GUIDE
+
+Create a detailed file:
+
+DEEN_FULL_APP_BUILD_GUIDE.md
+
+The guide must be written specifically for the actual existing project.
+
+Include the following sections:
+
+### 1. Development Environment
+
+Explain:
+
+- Required Android Studio version.
+- Required JDK.
+- Kotlin version.
+- Gradle version.
+- Android SDK.
+- Required Android SDK platforms.
+- Required build tools.
+- Emulator setup.
+- Physical Android device setup.
+
+Do not invent version numbers. Read the actual project configuration and recommend compatible versions.
+
+### 2. Project Setup
+
+Explain:
+
+- How to open the project.
+- How to sync Gradle.
+- How to resolve dependency issues.
+- How to configure local properties.
+- How to configure API endpoints.
+- How to configure required credentials securely.
+- How to run the first build.
+
+### 3. Project Folder Structure
+
+Explain the actual project structure.
+
+For every important directory and file, describe:
+
+- What it does.
+- Why it exists.
+- Which feature uses it.
+- How files communicate.
+
+### 4. Application Architecture
+
+Explain:
+
+- MainActivity.
+- Compose UI.
+- Navigation.
+- ViewModels.
+- Repositories.
+- Use Cases.
+- Data Sources.
+- Database.
+- Dependency Injection.
+- State Management.
+- Error Handling.
+
+Include an understandable architecture diagram.
+
+### 5. Feature Development Guide
+
+Explain step by step how each feature works:
+
+- Prayer Times.
+- Azan Notifications.
+- Qibla Compass.
+- Hadith.
+- Dua & Azkar.
+- Digital Tasbih.
+- Prayer Tracker.
+- Hijri Calendar.
+- Language Switching.
+- Light/Dark Mode.
+
+For each feature include:
+
+- Relevant source files.
+- Required dependencies.
+- Data flow.
+- Permissions.
+- Database requirements.
+- Implementation steps.
+- Testing steps.
+
+### 6. Islamic Content Management
+
+Explain:
+
+- Where Hadith data is stored.
+- Where Dua data is stored.
+- How Arabic content is maintained.
+- How Bengali translations are maintained.
+- How English translations are maintained.
+- How source references are stored.
+- How content is verified.
+- How corrections are safely applied.
+
+Include a content verification workflow.
+
+### 7. How to Run the App
+
+Provide exact commands based on the existing Gradle configuration.
+
+Include:
+
+- Gradle sync.
+- Debug build.
+- Test execution.
+- APK generation.
+- Clean build.
+- Installation on emulator/device.
+
+Use Windows PowerShell commands where appropriate.
+
+### 8. Debugging Guide
+
+Explain common problems and their solutions:
+
+- Gradle sync failure.
+- Kotlin compilation error.
+- Missing dependency.
+- Manifest permission error.
+- Location not working.
+- Notification not appearing.
+- Compass not responding.
+- Database migration failure.
+- API connection failure.
+- Arabic font rendering issue.
+- Language switching issue.
+- Light/Dark theme issue.
+
+Only include problems relevant to the actual project or clearly label general troubleshooting.
+
+### 9. APK Build Guide
+
+Explain how to generate a debug APK.
+
+Explain how to generate a signed release APK.
+
+Include:
+
+- Build variants.
+- Signing configuration.
+- Keystore generation.
+- Secure keystore storage.
+- Key alias.
+- Password handling.
+- Release build.
+- APK verification.
+- Installation testing.
+
+Never hardcode signing passwords.
+
+Never expose signing credentials in source control.
+
+### 10. Google Play Release Guide
+
+Explain:
+
+- Application ID.
+- Version code.
+- Version name.
+- App icon.
+- App name.
+- Launch screen.
+- Privacy policy.
+- Data safety declaration.
+- Permission declaration.
+- Content rating.
+- Store listing.
+- Screenshots.
+- App signing.
+- Android App Bundle (AAB).
+- Internal testing.
+- Closed testing.
+- Production release.
+
+Use current official Google Play requirements when external research is available.
+
+Clearly distinguish development readiness from Play Store approval.
+
+### 11. Maintenance Guide
+
+Explain:
+
+- How to update content.
+- How to update translations.
+- How to add new Hadith.
+- How to add new Dua.
+- How to add a new language.
+- How to add a new feature.
+- How to update dependencies.
+- How to perform database migrations.
+- How to troubleshoot production errors.
+
+### 12. Final Build Checklist
+
+Create a practical checklist that can be followed before every release.
+
+## PHASE 23 — AUTOMATED TESTING & BUILD VERIFICATION
+
+Run available project checks.
+
+Perform:
+
+1. Kotlin compilation.
+2. Gradle build.
+3. Static analysis.
+4. Lint.
+5. Unit tests.
+6. Instrumentation tests where possible.
+7. Database tests.
+8. Navigation tests.
+9. Localization tests.
+10. Theme tests.
+11. Prayer calculation tests.
+12. Qibla mathematical tests.
+13. Content integrity tests.
+14. Notification tests where possible.
+
+Fix confirmed technical errors.
+
+Never claim a test passed if it was not executed.
+
+Clearly identify tests requiring a physical device, external services, permissions or human review.
+
+## PHASE 24 — FINAL RELEASE PREPARATION
+
+Prepare the application for a release candidate.
+
+Check:
+
+- App identity.
+- Package name.
+- Version information.
+- App icon.
+- Splash screen.
+- Permissions.
+- Privacy policy.
+- Release configuration.
+- ProGuard/R8 configuration.
+- Crash handling.
+- Database migrations.
+- Offline behavior.
+- Network security.
+- Notification behavior.
+- Accessibility.
+- Small-screen compatibility.
+- Performance.
+- Signed release artifact.
+
+Do not publish or upload the app without explicit authorization.
+
+---
+
+# PART D — FINAL REPORTS & SAFE CORRECTION
+
+## PHASE 25 — COMPLETE AUDIT REPORT
+
+Create:
+
+DEEN_COMPLETE_AUDIT_REPORT.md
+
+Include:
+
+1. Executive Summary.
+2. Complete Project Inventory.
+3. Architecture Audit.
+4. Hadith Verification.
+5. Arabic Spelling Verification.
+6. Dua & Azkar Verification.
+7. Bengali Pronunciation.
+8. Bengali Translation.
+9. English Translation.
+10. Religious Content Data Integrity.
+11. Prayer Times.
+12. Azan Notifications.
+13. Qibla Accuracy.
+14. Hijri Calendar.
+15. Digital Tasbih.
+16. Prayer Tracker.
+17. Language Switching.
+18. Light/Dark Mode.
+19. UI/UX.
+20. Functionality.
+21. Security.
+22. Performance.
+23. Build and Testing Results.
+24. Fixed Issues.
+25. Remaining Issues.
+26. Human Verification Required.
+
+Every issue must include:
+
+- Issue ID.
+- Feature.
+- File name.
+- Record ID or code location.
+- Original value.
+- Verified expected value.
+- Evidence.
+- Source.
+- Severity.
+- Recommended correction.
+- Actual correction status.
+- Verification status.
+
+Severity:
+
+- CRITICAL.
+- HIGH.
+- MEDIUM.
+- LOW.
+
+Verification:
+
+- VERIFIED CORRECT.
+- ERROR FOUND.
+- UNVERIFIED.
+- PENDING HUMAN REVIEW.
+- NOT TESTED.
+
+Include actual statistics for all inspected records and executed tests.
+
+Never invent statistics.
+
+## PHASE 26 — SAFE ERROR CORRECTION
+
+Fix confirmed issues.
+
+You may fix:
+
+- Kotlin bugs.
+- Compose bugs.
+- Navigation errors.
+- Database bugs.
+- Localization errors.
+- Calculation bugs.
+- Notification bugs.
+- UI inconsistencies.
+- Security problems.
+
+For religious content:
+
+1. Preserve original records.
+2. Identify the exact issue.
+3. Locate an authoritative source.
+4. Compare the original and expected content.
+5. Document evidence.
+6. Correct only when reliable evidence supports the correction.
+7. Record the change.
+8. Mark disputed content for human review.
+
+Never replace religious content with AI-generated text.
+
+Create database backups before modifications.
+
+Preserve bookmarks, prayer history and Tasbih progress.
+
+Do not change unrelated working functionality.
+
+## PHASE 27 — FINAL VERIFICATION & HANDOVER
+
+After corrections:
+
+1. Run the build again.
+2. Run tests again.
+3. Check changed files.
+4. Verify database integrity.
+5. Verify navigation.
+6. Verify Bengali and English.
+7. Verify Light and Dark modes.
+8. Verify prayer calculations.
+9. Verify corrected Islamic content.
+10. Update all reports.
+
+Create these final deliverables:
+
+1. DEEN_COMPLETE_AUDIT_REPORT.md
+2. DEEN_FULL_APP_BUILD_GUIDE.md
+3. DEEN_DEVELOPMENT_ROADMAP.md
+4. Corrected Kotlin source files.
+5. Updated database migrations if necessary.
+6. Relevant automated tests.
+7. List of modified files.
+8. List of unresolved issues.
+9. Final build and testing results.
+10. Release readiness checklist.
+
+---
+
+# STRICT DEVELOPMENT RULES
+
+- Work on the existing Deen project.
+- Never create an unrelated demo application.
+- Do not redesign the entire application.
+- Do not remove existing working functionality.
+- Do not replace real content with dummy data.
+- Do not invent religious content.
+- Do not fabricate verification evidence.
+- Do not fabricate test results.
+- Do not claim external verification without accessing a reliable source.
+- Do not claim physical device testing without a physical device.
+- Do not mark unverified religious content as verified.
+- Do not perform destructive database changes.
+- Do not expose private API keys.
+- Do not skip existing project files.
+- Do not silently change application architecture.
+- Do not install unnecessary dependencies.
+- Do not claim that an APK or AAB was generated unless the file actually exists.
+- Do not publish the application without explicit authorization.
+
+If the project is too large, divide the work into manageable phases.
+
+Maintain a progress checklist and record:
+
+- Completed phases.
+- Remaining phases.
+- Files inspected.
+- Files modified.
+- Tests executed.
+- Tests pending.
+- External verification limitations.
+
+Do not confuse a written development guide with actual implementation.
+
+Do not confuse a successful compilation with complete application functionality.
+
+Do not confuse AI-based religious proofreading with qualified scholarly verification.
+
+# EXECUTION ORDER
+
+Follow this exact order:
+
+STEP 1: Inspect the complete existing project.
+
+STEP 2: Create the project inventory.
+
+STEP 3: Audit every Islamic content dataset.
+
+STEP 4: Audit the complete application architecture.
+
+STEP 5: Audit every feature and screen.
+
+STEP 6: Create the audit report.
+
+STEP 7: Create the development roadmap.
+
+STEP 8: Fix confirmed high-priority problems.
+
+STEP 9: Complete missing or broken features safely.
+
+STEP 10: Create the full app build guide.
+
+STEP 11: Run tests and build the application.
+
+STEP 12: Prepare the release candidate.
+
+STEP 13: Update all reports with actual results.
+
+If a step cannot be completed, explain exactly why and continue with the remaining feasible work.
+
+# FINAL OBJECTIVE
+
+Deliver a complete, professionally developed, tested and release-ready DEEN Android application.
+
+The application must prioritize:
+
+1. Islamic content authenticity.
+2. Arabic text accuracy.
+3. Bengali and English translation accuracy.
+4. Reliable prayer calculations.
+5. Correct Qibla direction.
+6. Stable application functionality.
+7. Professional UI/UX.
+8. Secure and maintainable code.
+9. Complete development documentation.
+10. Reliable Android release preparation.
+
+**START NOW: INSPECT THE EXISTING DEEN PROJECT, CREATE THE INVENTORY AND FOLLOW THE EXECUTION ORDER. DO NOT STOP AFTER PROVIDING A PLAN. PERFORM THE AVAILABLE WORK, FIX CONFIRMED ERRORS, BUILD THE APP AND DOCUMENT EVERYTHING.**

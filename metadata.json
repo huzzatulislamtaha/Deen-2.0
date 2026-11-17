@@ -1,0 +1,6 @@
+{
+  "name": "DEEN",
+  "description": "Authentic Islamic companion app with verified Hadith, Dua & Azkar, Prayer Times, Qibla Compass, Hijri Calendar, Digital Tasbih, and Prayer Tracker in Bengali and English.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -11,6 +11,8 @@ import com.example.data.repository.NotebookRepository
 import com.example.data.repository.PreferencesRepository
 import com.example.data.repository.UserPreferences
 import com.example.domain.calculator.HijriCalendarCalculator
+import com.example.domain.calculator.PrayerInformationCalculator
+import com.example.domain.calculator.PrayerInformationState
 import com.example.domain.calculator.PrayerTimesCalculator
 import com.example.domain.calculator.QiblaCalculator
 import com.example.domain.model.AzanSoundOption
@@ -51,7 +53,8 @@ data class MainUiState(
     val importantEvents: List<IslamicEvent> = emptyList(),
     val isDetectingLocation: Boolean = false,
     val locationError: String? = null,
-    val canScheduleExactAlarms: Boolean = true
+    val canScheduleExactAlarms: Boolean = true,
+    val prayerInfo: PrayerInformationState? = null
 )
 
 class MainViewModel(
@@ -89,6 +92,27 @@ class MainViewModel(
             year, month, day,
             effectiveLocation, prefs.calculationMethod, prefs.madhab, prefs.highLatitudeRule
         )
+        val yesterdayCal = (cal.clone() as Calendar).apply { add(Calendar.DAY_OF_MONTH, -1) }
+        val yesterdaySchedule = PrayerTimesCalculator.calculateDaySchedule(
+            yesterdayCal.get(Calendar.YEAR),
+            yesterdayCal.get(Calendar.MONTH) + 1,
+            yesterdayCal.get(Calendar.DAY_OF_MONTH),
+            effectiveLocation, prefs.calculationMethod, prefs.madhab, prefs.highLatitudeRule
+        )
+        val tomorrowCal = (cal.clone() as Calendar).apply { add(Calendar.DAY_OF_MONTH, 1) }
+        val tomorrowSchedule = PrayerTimesCalculator.calculateDaySchedule(
+            tomorrowCal.get(Calendar.YEAR),
+            tomorrowCal.get(Calendar.MONTH) + 1,
+            tomorrowCal.get(Calendar.DAY_OF_MONTH),
+            effectiveLocation, prefs.calculationMethod, prefs.madhab, prefs.highLatitudeRule
+        )
+        val prayerInfo = PrayerInformationCalculator.evaluate(
+            nowMillis = nowMillis,
+            todaySchedule = todaySchedule,
+            yesterdaySchedule = yesterdaySchedule,
+            tomorrowSchedule = tomorrowSchedule,
+            timeZoneId = effectiveLocation.timeZoneId
+        )
         val nextPrayer = PrayerTimesCalculator.findNextPrayer(
             nowMillis,
             effectiveLocation, prefs.calculationMethod, prefs.madhab, prefs.highLatitudeRule
@@ -117,7 +141,8 @@ class MainViewModel(
             importantEvents = events,
             isDetectingLocation = detecting,
             locationError = locErr,
-            canScheduleExactAlarms = alarmScheduler.canScheduleExact()
+            canScheduleExactAlarms = alarmScheduler.canScheduleExact(),
+            prayerInfo = prayerInfo
         )
     }.stateIn(
         scope = viewModelScope,

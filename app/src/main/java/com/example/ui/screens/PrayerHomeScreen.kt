@@ -82,7 +82,10 @@ import com.example.domain.model.CityLocation
 import com.example.domain.model.DailyPrayerSchedule
 import com.example.domain.model.Madhab
 import com.example.domain.model.PrayerName
+import com.example.ui.components.ActivePrayerDurationProgress
 import com.example.ui.components.DeenCard
+import com.example.ui.components.PrayerBoundaryInfoNote
+import com.example.ui.components.PrayerInformationSections
 import com.example.ui.components.prayerDisplayName
 import com.example.ui.viewmodel.MainUiState
 import java.util.Locale
@@ -544,10 +547,23 @@ fun PrayerHomeScreen(
             }
 
             val entries = state.todaySchedule?.entries ?: emptyList()
+            val durationByPrayer = state.prayerInfo?.allPrayerDurations?.associateBy { it.prayer } ?: emptyMap()
+            val hasCurrentPrayer = state.prayerInfo?.currentPrayerDuration != null
             items(entries, key = { it.prayer.key }) { entry ->
-                val isNext = state.nextPrayer?.prayer == entry.prayer && !state.nextPrayer.isTomorrow
+                val duration = if (entry.prayer.isObligatory) durationByPrayer[entry.prayer] else null
+                val isCurrent = duration?.isCurrent == true
+                val isNextFallback = !hasCurrentPrayer &&
+                    state.nextPrayer?.prayer == entry.prayer &&
+                    !state.nextPrayer.isTomorrow
+                val isHighlighted = isCurrent || isNextFallback
                 val notifEnabled = state.prefs.notificationPrefs.isEnabled(entry.prayer)
-                DeenCard(highlighted = isNext) {
+                val timeDisplay = if (duration != null) {
+                    "${duration.formattedStart} – ${duration.formattedEnd}"
+                } else {
+                    entry.formattedTime
+                }
+
+                DeenCard(highlighted = isHighlighted) {
                     Row(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.SpaceBetween,
@@ -555,28 +571,44 @@ fun PrayerHomeScreen(
                     ) {
                         Row(
                             verticalAlignment = Alignment.CenterVertically,
-                            horizontalArrangement = Arrangement.spacedBy(12.dp)
+                            horizontalArrangement = Arrangement.spacedBy(12.dp),
+                            modifier = Modifier.weight(1f)
                         ) {
                             Icon(
                                 imageVector = Icons.Outlined.Schedule,
                                 contentDescription = null,
-                                tint = if (isNext) {
+                                tint = if (isHighlighted) {
                                     MaterialTheme.colorScheme.primary
                                 } else {
                                     MaterialTheme.colorScheme.onSurfaceVariant
                                 }
                             )
                             Column {
+                                Row(
+                                    verticalAlignment = Alignment.CenterVertically,
+                                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                                ) {
+                                    Text(
+                                        text = prayerDisplayName(entry.prayer),
+                                        style = MaterialTheme.typography.titleMedium,
+                                        fontWeight = if (isHighlighted) FontWeight.Bold else FontWeight.Medium,
+                                        color = MaterialTheme.colorScheme.onSurface
+                                    )
+                                    if (isCurrent) {
+                                        Text(
+                                            text = strings.currentPrayerTimeLabel,
+                                            style = MaterialTheme.typography.labelSmall,
+                                            fontWeight = FontWeight.SemiBold,
+                                            color = MaterialTheme.colorScheme.primary,
+                                            modifier = Modifier.testTag("current_prayer_duration_badge")
+                                        )
+                                    }
+                                }
                                 Text(
-                                    text = prayerDisplayName(entry.prayer),
-                                    style = MaterialTheme.typography.titleMedium,
-                                    color = MaterialTheme.colorScheme.onSurface
-                                )
-                                Text(
-                                    text = entry.formattedTime,
+                                    text = timeDisplay,
                                     style = MaterialTheme.typography.bodyLarge,
                                     fontWeight = FontWeight.SemiBold,
-                                    color = if (isNext) {
+                                    color = if (isHighlighted) {
                                         MaterialTheme.colorScheme.primary
                                     } else {
                                         MaterialTheme.colorScheme.onSurfaceVariant
@@ -610,7 +642,24 @@ fun PrayerHomeScreen(
                             }
                         }
                     }
+
+                    if (isCurrent && duration != null) {
+                        ActivePrayerDurationProgress(duration = duration)
+                    }
                 }
+            }
+
+            if (state.prayerInfo != null) {
+                item {
+                    PrayerBoundaryInfoNote()
+                }
+            }
+
+            item {
+                Spacer(modifier = Modifier.height(4.dp))
+                PrayerInformationSections(
+                    prayerInfo = state.prayerInfo
+                )
             }
 
             item {

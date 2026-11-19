@@ -315,6 +315,32 @@ interface AppStrings {
     val privacyPolicyBody: String
     val aboutDeenTitle: String
     val aboutDeenBody: String
+
+    // Prayer Information (Home Page)
+    val prayerInfoSectionTitle: String
+    val forbiddenTimesTitle: String
+    val forbiddenTimesSubtitle: String
+    val forbiddenSunriseTitle: String
+    val forbiddenSunriseDesc: String
+    val forbiddenZenithTitle: String
+    val forbiddenZenithDesc: String
+    val forbiddenSunsetTitle: String
+    val forbiddenSunsetDesc: String
+    val forbiddenStatusActiveFormat: String
+    val forbiddenStatusNextFormat: String
+    val forbiddenEndsInLabel: String
+    val forbiddenNextInLabel: String
+    val forbiddenPrecautionNote: String
+    val prayerDurationTitle: String
+    val currentPrayerTimeLabel: String
+    val nextPrayerWindowLabel: String
+    val prayerDurationRemainingLabel: String
+    val prayerDurationElapsedFormat: String
+    val viewAllFivePrayers: String
+    val hideAllFivePrayers: String
+    val prayerDurationGeneralNote: String
+    val prayerDurationAsrIshaNote: String
+    val prayerInfoUnavailable: String
 }
 
 object EnglishStrings : AppStrings {
@@ -622,6 +648,31 @@ object EnglishStrings : AppStrings {
     override val privacyPolicyBody = "DEEN operates offline on your device. Location coordinates are used strictly on-device to compute prayer times and Qibla bearing. Your prayer logs, Tasbih sessions, bookmarks, and personal notes remain stored locally on your device."
     override val aboutDeenTitle = "About DEEN"
     override val aboutDeenBody = "DEEN is a calm, accurate, bilingual (Bengali & English) Islamic companion built for authentic daily worship, Bangladesh 64-district prayer guidance, and private Islamic study."
+
+    override val prayerInfoSectionTitle = "Prayer Information"
+    override val forbiddenTimesTitle = "Forbidden Prayer Times"
+    override val forbiddenTimesSubtitle = "Prohibited windows for voluntary (Nafl) prayers"
+    override val forbiddenSunriseTitle = "Sunrise"
+    override val forbiddenSunriseDesc = "From sunrise until the sun rises sufficiently (15m precautionary buffer)"
+    override val forbiddenZenithTitle = "Zenith (Solar Noon)"
+    override val forbiddenZenithDesc = "Short period before Dhuhr when the sun is at its peak (10m precautionary buffer)"
+    override val forbiddenSunsetTitle = "Sunset (Before Maghrib)"
+    override val forbiddenSunsetDesc = "Before sunset completes; distinct from Maghrib prayer time (15m precautionary buffer)"
+    override val forbiddenStatusActiveFormat = "Active now: %s"
+    override val forbiddenStatusNextFormat = "Next: %s"
+    override val forbiddenEndsInLabel = "Ends in"
+    override val forbiddenNextInLabel = "Starts in"
+    override val forbiddenPrecautionNote = "Precautionary buffers (15m / 10m / 15m) are practical display guidelines, not universally fixed Islamic rulings. Sunset prohibition precedes Maghrib."
+    override val prayerDurationTitle = "Prayer Time Duration"
+    override val currentPrayerTimeLabel = "Current Prayer Time"
+    override val nextPrayerWindowLabel = "Next Prayer"
+    override val prayerDurationRemainingLabel = "Remaining"
+    override val prayerDurationElapsedFormat = "%d%% elapsed"
+    override val viewAllFivePrayers = "View All 5 Prayers"
+    override val hideAllFivePrayers = "Hide All 5 Prayers"
+    override val prayerDurationGeneralNote = "The next prayer time marks a general interval boundary (Fajr ends at Sunrise, Dhuhr at Asr, Asr at Sunset, Maghrib at Isha), not necessarily the final valid time in every school of thought."
+    override val prayerDurationAsrIshaNote = "Scholarly notes: For Asr, delaying until the sun turns pale before sunset is disliked. For Isha, scholars differ between Islamic midnight/third of the night and Fajr—next Fajr is shown only as a general boundary."
+    override val prayerInfoUnavailable = "Prayer information is currently unavailable for the selected schedule."
 }
 
 object BengaliStrings : AppStrings {
@@ -929,6 +980,31 @@ object BengaliStrings : AppStrings {
     override val privacyPolicyBody = "দ্বীন সম্পূর্ণ অফলাইন-বান্ধব অ্যাপ। আপনার অবস্থানের তথ্য কেবল আপনার ডিভাইসেই নামাজের সময় ও কিবলা নির্ণয়ের জন্য ব্যবহৃত হয়। আপনার নামাজের হিসাব, তাসবীহ, বুকমার্ক ও নোট কেবল আপনার ফোনেই সংরক্ষিত থাকে।"
     override val aboutDeenTitle = "দ্বীন সম্পর্কে"
     override val aboutDeenBody = "দ্বীন হলো বাংলা ও ইংরেজি ভাষায় বিশুদ্ধ হাদিস, দোয়া, বাংলাদেশের ৬৪ জেলার নামাজের সময়, কিবলা কম্পাস, হিজরি ক্যালেন্ডার ও ব্যক্তিগত ইসলামিক নোটবুকের নির্ভরযোগ্য সঙ্গী।"
+
+    override val prayerInfoSectionTitle = "নামাজের তথ্য"
+    override val forbiddenTimesTitle = "নামাজের নিষিদ্ধ সময়"
+    override val forbiddenTimesSubtitle = "নফল নামাজ আদায়ের জন্য নিষিদ্ধ তিনটি সময়"
+    override val forbiddenSunriseTitle = "সূর্যোদয়"
+    override val forbiddenSunriseDesc = "সূর্যোদয় থেকে সূর্য কিছুটা উপরে ওঠা পর্যন্ত (সতর্কতামূলক ১৫ মিনিট)"
+    override val forbiddenZenithTitle = "ঠিক মধ্যাহ্ন (যাওয়াল)"
+    override val forbiddenZenithDesc = "যোহরের ঠিক পূর্বে সূর্য মাথার উপরে থাকার সংক্ষিপ্ত সময় (সতর্কতামূলক ১০ মিনিট)"
+    override val forbiddenSunsetTitle = "সূর্যাস্ত (মাগরিবের পূর্বে)"
+    override val forbiddenSunsetDesc = "সূর্য অস্ত যাওয়ার সময়; এটি মাগরিবের নামাজের সময় থেকে আলাদা (সতর্কতামূলক ১৫ মিনিট)"
+    override val forbiddenStatusActiveFormat = "বর্তমানে চলমান: %s"
+    override val forbiddenStatusNextFormat = "পরবর্তী: %s"
+    override val forbiddenEndsInLabel = "শেষ হতে বাকি"
+    override val forbiddenNextInLabel = "শুরু হতে বাকি"
+    override val forbiddenPrecautionNote = "সতর্কতামূলক সময়সীমা (১৫ / ১০ / ১৫ মিনিট) ব্যবহারিক নির্দেশনা মাত্র, সর্বজনীন নির্দিষ্ট শরিয়তি সীমা নয়। সূর্যাস্তের নিষিদ্ধ সময় মাগরিবের পূর্বে শেষ হয়।"
+    override val prayerDurationTitle = "প্রতিটি ওয়াক্তের সময়সীমা"
+    override val currentPrayerTimeLabel = "বর্তমান নামাজের ওয়াক্ত"
+    override val nextPrayerWindowLabel = "পরবর্তী নামাজ"
+    override val prayerDurationRemainingLabel = "বাকি সময়"
+    override val prayerDurationElapsedFormat = "%d%% অতিক্রান্ত"
+    override val viewAllFivePrayers = "পাঁচ ওয়াক্তের সময়সীমা দেখুন"
+    override val hideAllFivePrayers = "তালিকা সংক্ষিপ্ত করুন"
+    override val prayerDurationGeneralNote = "পরবর্তী নামাজের শুরু এখানে সাধারণ সীমা হিসেবে দেখানো হয়েছে (ফজর সূর্যোদয় পর্যন্ত, যোহর আসর পর্যন্ত, আসর সূর্যাস্ত পর্যন্ত, মাগরিব এশা পর্যন্ত)—সব মাজহাবে এটিই চূড়ান্ত বৈধ সময় নয়।"
+    override val prayerDurationAsrIshaNote = "আলেমদের মতভেদ: আসরের নামাজ সূর্য হলুদ হওয়া পর্যন্ত বিলম্ব করা মাকরুহ। এশার শেষ সময় নিয়ে অর্ধরাত ও ফজরের মধ্যে আলেমদের মতভেদ রয়েছে; পরবর্তী ফজর কেবল সাধারণ সীমা হিসেবে দেখানো হয়েছে।"
+    override val prayerInfoUnavailable = "নির্বাচিত সময়সূচির জন্য নামাজের তথ্য বর্তমানে পাওয়া যাচ্ছে না।"
 }
 
 fun stringsFor(language: AppLanguage): AppStrings =
